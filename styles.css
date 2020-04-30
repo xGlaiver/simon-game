@@ -7,31 +7,30 @@ body {
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
+  margin:  1% 5% 5%;
   color: #FEF2BF;
 }
 
 #start {
-  box-shadow: 0px 0px 0px 2px #9fb4f2;
-  background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
-  background-color:#7892c2;
-  border:1px solid #4e6096;
+  box-shadow: 0px 0px 0px 2px #f75a00;
+  background:linear-gradient(to bottom, #f70020 5%, #f75a00 100%);
+  border:1px solid #f70020;
+  border-radius: 100%;
   display:inline-block;
   cursor:pointer;
   color:#ffffff;
-  font-family:Arial;
+  font-family:'Press Start 2P', cursive;
   font-size:15px;
   padding:10px 10px;
   text-decoration:none;
-  text-shadow:0px 1px 0px #283966;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  text-shadow:0px 1px 0px #f75a00;
+  position: relative;
+  width: 180px;
+  height: 70px;
 }
 
 #start:hover {
-	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background:linear-gradient(to bottom, #f75a00 5%, #f70020 100%);
 	background-color:#476e9e;
 }
 #start:active {
@@ -85,42 +84,8 @@ body {
   background-color: grey;
 }
 
-@media screen and (max-width:400px) {
-
-  #level-title {
-    font-size: 1.7rem;
-    line-height: 2;
-    padding-top: 3rem;
-  }
-
-  #start {
-    box-shadow: 0px 0px 0px 2px #9fb4f2;
-    background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
-    background-color:#7892c2;
-    border:1px solid #4e6096;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:15px;
-    padding:10px 10px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #283966;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-
-  .container {
-    width: 100%;
-  }
-
-  .btn {
-    height: 80px;
-    width: 80px;
-    margin: 12px;
-  }
+.display-off{
+  display: none !important;
 }
 
 @media screen and (min-width:300px) and (max-width:600px) {
@@ -128,25 +93,12 @@ body {
   #level-title {
     font-size: 2rem;
     line-height: 2;
-    padding-top: 3rem;
+    margin: 1% 5% 5%;
   }
 
   #start {
-    box-shadow: 0px 0px 0px 2px #9fb4f2;
-    background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
-    background-color:#7892c2;
-    border:1px solid #4e6096;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:15px;
-    padding:10px 10px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #283966;
-    position: absolute;
-    top: 0;
-    width: 100%;
+    width: 160px;
+    height: 50px;
   }
 
   .container{

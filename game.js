@@ -21,6 +21,7 @@ function start() {
     $("h1").text("Level " +level);
     nextSequence();
     started = true;
+    $("#start").addClass("display-off");
   }
 }
 
@@ -67,6 +68,7 @@ function startOver(){
   level = 0;
   gamePattern = [];
   started = false;
+  $("#start").removeClass("display-off");
 }
 
 function nextSequence() {

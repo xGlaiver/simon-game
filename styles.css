@@ -1,43 +1,106 @@
 body {
   text-align: center;
   background-color: #011F3F;
-  overflow: hidden;
+  overflow: auto;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  1% 5% 5%;
+  margin: 3% 5% 5%;
   color: #FEF2BF;
 }
 
 #start {
   box-shadow: 0px 0px 0px 2px #f75a00;
-  background:linear-gradient(to bottom, #f70020 5%, #f75a00 100%);
-  border:1px solid #f70020;
+  background: linear-gradient(to bottom, #f70020 0, #f75a00 100%);
+  border: 1px solid #f70020;
   border-radius: 100%;
-  display:inline-block;
-  cursor:pointer;
-  color:#ffffff;
-  font-family:'Press Start 2P', cursive;
-  font-size:15px;
-  padding:10px 10px;
-  text-decoration:none;
-  text-shadow:0px 1px 0px #f75a00;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 15px;
+  padding: 10px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #f75a00;
   position: relative;
   width: 180px;
   height: 70px;
 }
 
 #start:hover {
-	background:linear-gradient(to bottom, #f75a00 5%, #f70020 100%);
-	background-color:#476e9e;
+  background: linear-gradient(to bottom, #f75a00 0, #f70020 100%);
+  background-color: #476e9e;
 }
+
 #start:active {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
 
+/* Istruzioni */
+.open-instruction {
+  background: linear-gradient(to bottom, #f70020 0, #f75a00 100%);
+  box-shadow: 0px 0px 3px 3px #f75a00;
+  border-radius: 10%;
+  position: relative;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  font-family: 'Roboto Slab', serif;
+  padding: 10px;
+}
+
+.open-instruction:hover {
+  background: linear-gradient(to bottom, #f75a00 0, #f70020 100%);
+}
+
+.close-instruction {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  font-size: 50px;
+  text-decoration: none;
+  color: white;
+  z-index: 100;
+}
+
+.overlay {
+  position: fixed;
+  height: 0;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: .5s;
+  overflow: hidden;
+}
+
+.overlay-instruction {
+  position: relative;
+  top: 5%;
+  width: 60%;
+  margin: auto;
+}
+
+.title-instruction {
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.text-instruction {
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  font-size: 21px;
+  line-height: 2;
+}
+
+/* Gioco */
 .container {
   display: block;
   width: 50%;
@@ -56,6 +119,7 @@ body {
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
+  cursor: pointer;
 }
 
 .game-over {
@@ -84,11 +148,15 @@ body {
   background-color: grey;
 }
 
-.display-off{
+.display-off {
   display: none !important;
 }
 
-@media screen and (min-width:300px) and (max-width:600px) {
+@media screen and (max-width:359px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
 
   #level-title {
     font-size: 1.5rem;
@@ -101,7 +169,92 @@ body {
     height: 50px;
   }
 
-  .container{
+  /* Istruzioni */
+  .open-instruction {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    padding: 2px 5px;
+    background-color: #e59d02;
+  }
+
+  .overlay-instruction {
+    width: 90%;
+  }
+
+  .title-instruction {
+    font-size: 25px;
+    display: inline-block;
+    width: 100%;
+    margin: 40px 1px;
+  }
+
+  .text-instruction {
+    font-size: 17px;
+    padding: 10px;
+  }
+
+  /* Gioco */
+  .container {
+    width: 100%;
+  }
+
+  .btn {
+    height: 95px;
+    width: 95px;
+    margin: 12px;
+  }
+}
+
+@media screen and (min-width:360px) and (max-width:600px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  #level-title {
+    font-size: 1.5rem;
+    line-height: 2;
+    margin: 1% 1% 5%;
+    display: block;
+  }
+
+  #start {
+    width: 160px;
+    height: 50px;
+  }
+
+  /* Istruzioni */
+  .open-instruction {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    padding: 2px 5px;
+    background-color: #e59d02;
+  }
+
+  .overlay-instruction {
+    width: 90%;
+  }
+
+  .title-instruction {
+    font-size: 30px;
+    display: inline-block;
+    width: 100%;
+    margin: 40px 1px;
+  }
+
+  .text-instruction {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  /* Gioco */
+  .container {
     width: 100%;
   }
 
@@ -113,6 +266,10 @@ body {
 }
 
 @media screen and (min-width:601px) and (max-width:1023px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
 
   #level-title {
     font-size: 2rem;
@@ -120,7 +277,35 @@ body {
     margin: 8% 3% 3%;
   }
 
-  .container{
+  /* Istruzioni */
+  .open-instruction {
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    padding: 2px 5px;
+    background-color: #e59d02;
+  }
+
+  .overlay-instruction {
+    width: 90%;
+  }
+
+  .title-instruction {
+    font-size: 30px;
+    display: inline-block;
+    width: 100%;
+    margin: 40px 1px;
+  }
+
+  .text-instruction {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  /* Gioco */
+  .container {
     width: 100%;
   }
 
@@ -132,6 +317,10 @@ body {
 }
 
 @media screen and (min-width:1024px) and (max-width:1366px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
 
   #level-title {
     font-size: 2.3rem;
@@ -139,7 +328,35 @@ body {
     margin: 5% 3% 3%;
   }
 
-  .container{
+  /* Istruzioni */
+  .open-instruction {
+    display: inline-block;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    padding: 2px 5px;
+    background-color: #e59d02;
+  }
+
+  .overlay-instruction {
+    width: 90%;
+  }
+
+  .title-instruction {
+    font-size: 30px;
+    display: inline-block;
+    width: 100%;
+    margin: 40px 1px;
+  }
+
+  .text-instruction {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  /* Gioco */
+  .container {
     width: 100%;
   }
 

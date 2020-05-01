@@ -18,7 +18,7 @@ function start() {
   if(!started){
 
     var level = 0;
-    $("h1").text("Level " +level);
+    $("h1 #level-title").text("Level " +level);
     nextSequence();
     started = true;
     $("#start").addClass("display-off");
@@ -105,3 +105,14 @@ function animatePress(currentColour) {
     $("#" +currentColour).removeClass("pressed");
   }, 100);
 }
+
+
+// Istruzioni
+
+$(".open-instruction").click(function(){
+  $(".overlay").css("height", "100%");
+});
+
+$(".close-instruction").click(function(){
+  $(".overlay").css("height", "0");
+});

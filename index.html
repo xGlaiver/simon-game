@@ -4,17 +4,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-
 
   <title>Simon Game</title>
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
+<!-- Memorizza la sequenza dei pulsanti che vedi lampeggiare. Ricorda che ad ogni nuovo livello devi ripetere tutta l'intera sequenza, aggiungendo il pulsante che ha lampeggiato per ultimo.-->
 
 <body>
+
+  <!-- Istruzioni -->
+  <span class="open-instruction">Istruzioni</span>
+
+  <div class="overlay">
+    <a href="javascript:void(0)" class="close-instruction">&times;</a>
+    <div class="overlay-instruction">
+      <h1 class="title-instruction">Simon-Game</h1>
+      <p class="text-instruction">Memorizza la sequenza dei pulsanti che vedi lampeggiare. Ricorda che ad ogni nuovo livello devi ripetere tutta l'intera sequenza, aggiungendo il pulsante che ha lampeggiato per ultimo. </br> Buon divertimento! </p>
+    </div>
+  </div>
+
   <h1 id="level-title">Press A Key to Start</h1>
   <div class="container">
     <div class="row">

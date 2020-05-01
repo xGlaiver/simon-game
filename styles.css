@@ -122,6 +122,11 @@ body {
   cursor: pointer;
 }
 
+.game-win {
+  background-color: green;
+  opacity: 0.8;
+}
+
 .game-over {
   background-color: red;
   opacity: 0.8;

@@ -46,6 +46,14 @@ function checkAnswer(currentLevel) {
 
     if(userClickedPattern.length === gamePattern.length){
 
+      $("body").addClass("game-win");
+      setTimeout(function(){
+        $("body").removeClass("game-win");
+      }, 200);
+
+      var audio = new Audio("sounds/vittoria.mp3");
+      audio.play()
+
       setTimeout(function(){
         nextSequence();
       }, 1000);

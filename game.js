@@ -18,14 +18,13 @@ function start() {
   if(!started){
 
     var level = 0;
+    gamePattern = [];
     $("h1 #level-title").text("Level " +level);
     nextSequence();
     started = true;
     $("#start").addClass("display-off");
   }
 }
-
-$(document).keypress(start);
 
 $(".btn").click(function() {
 
@@ -66,15 +65,15 @@ function checkAnswer(currentLevel) {
       $("body").removeClass("game-over");
     }, 200);
 
-    $("#level-title").text("Game Over, Press Any Key to Restart");
+    $("#level-title").text("Game Over! Score: Level " +gamePattern.length);
 
     startOver();
   }
 }
 
 function startOver(){
-  level = 0;
-  gamePattern = [];
+
+  level =0;
   started = false;
   $("#start").removeClass("display-off");
 }
